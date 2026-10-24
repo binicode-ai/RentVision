@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "RentVision",
@@ -10,10 +11,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en">
-      <body>
+      <body className="app-body">
         <Header />
 
-        <main>{children}</main>
+        <main className="site-main">{children}</main>
 
         <Footer />
       </body>
